@@ -1,0 +1,109 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+  /* background: #E5E5E5; */
+}
+
+#admin-tabs .nav-tabs {
+  border-bottom: none !important;
+}
+
+#concession-file_upload custom-file-label::after { 
+  background-color: #00B0FF !important;
+}
+
+
+#admin-tabs .nav.nav-tabs li a {
+  color: rgba(0, 0, 0, 0.5) !important;
+  display: inline-block;
+  position: relative;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+#admin-tabs .nav.nav-tabs li a::after{
+  content: '';
+  position: absolute;
+  width: 70%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left:20%;
+  background-color: #0087ca;
+  transition: transform 0.25s ease-out;
+  margin: 0 auto;
+}
+
+#admin-tabs .nav.nav-tabs li a:hover::after{
+  transform: scale(1);
+  transform-origin: bottom center;
+}
+
+#admin-tabs .nav.nav-tabs li a:hover{
+  border-color: transparent !important;
+  background-color: inherit !important;
+}
+
+#admin-tabs .nav.nav-tabs li a.active{
+  color: rgba(0, 0, 0, 0.5) !important;
+  border-color: transparent !important;
+  background-color: inherit !important;
+  transition: transform 5s ease-in;
+}
+
+#admin-tabs .nav.nav-tabs li a.active::after{
+  content: '';
+  position: absolute;
+  width: 70%;
+  transform: scaleX(1);
+  height: 3px;
+  bottom: 0;
+  left: 20%;
+  background-color: #0087ca;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+}
+
+#admin-tabs .nav.nav-tabs li a svg{
+  width: 15.1px;
+  height: 15.8px;
+  margin-right: 2px;
+  vertical-align: text-bottom;
+  fill: #0087ca;
+}
+
+
+@media (min-width: 768px){
+  #admin-tabs .nav.nav-tabs li a {
+    font-size: 12px;
+  }
+  
+}
+@media (min-width: 1200px){
+  #admin-tabs .nav.nav-tabs li a {
+    font-size: 14px;
+  }
+
+  #admin-tabs .nav.nav-tabs li a svg{
+    width: 20.1px;
+    height: 20.8px;
+    margin-right: 3px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  } */
+}
