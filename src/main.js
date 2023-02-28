@@ -1,9 +1,10 @@
 import { createApp } from 'vue'
-import store from './stores/store.js'
+import store from './stores/store'
 import App from './App.vue'
 
 import './assets/main.css'
-// import AdminTables from './components/AdminTables.vue'
+// import ExpandableRow from './components/ExpandableRow.vue'
+
 // Vuetify
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
@@ -17,8 +18,8 @@ const vuetify = createVuetify({
 
 
 const app = createApp(App)
-// app.component('AdminTables', AdminTables)
+// app.component('ExpandableRow', ExpandableRow)
 
 app.use(store).use(vuetify)
-
+// app.config.compilerOptions.isCustomElement = (tag) => tag.startsWith('v-');
 app.mount('#app')

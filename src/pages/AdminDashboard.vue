@@ -25,7 +25,8 @@
                     >
                     <v-container fluid>
                         <v-row>
-                            <v-col
+                            <ExpandableRow />
+                            <!-- <v-col
                                 v-for="i in 6"
                                 :key="i"
                                 cols="12"
@@ -37,21 +38,22 @@
                                 aspect-ratio="1"
                                 ></v-img>
                                 
-                            </v-col>
+                            </v-col> -->
                         </v-row>
                     </v-container>
                     </v-window-item>
                 </v-window>
             </v-card>
         </section>
-        <AdminTables />
+        <!-- <AdminTables /> -->
     </div>
 </template>
 
 <script>
-import AdminTables from '../components/AdminTables.vue';
+// import AdminTables from '../components/AdminTables.vue';
+import ExpandableRow from '../components/ExpandableRow.vue';
 export default {
-    components: { AdminTables },
+    components: { ExpandableRow },
     data() {
         return {
             selectedTab: "All",
